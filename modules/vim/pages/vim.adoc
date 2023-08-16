@@ -1,0 +1,38 @@
+= Vim
+:date created: 2022-06-27 14:19
+
+IMPORTANT: Bram Moolenaar (1961 – 2023.08.03)
+
+== Vim Future
+
+https://groups.google.com/g/vim_dev/c/dq9Wu5jqVTw[The future of the Vim project^]
+
+== Vim Tutor
+
+[source,bash]
+----
+# open Vim tutor
+vimtutor zh
+----
+
+== Learn Vim
+
+https://github.com/wsdjeg/Learn-Vim_zh_cn[Learn Vim]
+
+== Vim Command
+
+[source,bash]
+----
+# help
+:h <command>
+# config
+:version
+----
+
+== Vim Web
+
+* https://Vim-adventures.com[Vim Adventure]
+* https://Vimsnake.com/[Vim Snake]
+* https://www.outcoldman.com/cheatsheets/vim/[HotKey]
+* https://michael.peopleofhonoronly.com/vim/[HotKey-IMG]
+

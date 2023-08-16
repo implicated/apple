@@ -1,0 +1,62 @@
+= IDEA Error
+:toc:
+
+== Maven Update throw InternalErrorException
+
+****
+[source,java]
+----
+org.apache.maven.InternalErrorException: Internal error: java.lang.IllegalArgumentException: Malformed \uxxxx encoding.
+----
+
+**Solution:**
+
+[source,bash]
+----
+grep -re '\u0000' ~/.m2
+rm -rf
+find ~/.m2/ -name resolver-status.properties -delete
+----
+
+menu:Settings[Build,Execution,Deployment > Maven > Runner] modify VMOptions:
+
+[source,java]
+----
+-Daether.metadataResolver.threads=1
+----
+
+https://stackoverflow.com/questions/68003423/java-lang-illegalargumentexception-malformed-uxxxx-encoding-while-mvn-install[Read More]
+****
+
+== Maven Reload Cannot reconnect
+
+****
+[source,java]
+----
+org.apache.maven.InternalErrorException: Internal error: java.lang.IllegalArgumentException: Malformed \uxxxx encoding.
+----
+
+**Solution:**
+
+. Restart
+. Set `JDK for Importer`
++
+menu:Settings[Build,Execution,Deployment > Maven > Importing > JDK for importer]:
+. Delete `.lastUpdated` file in `~/m2`
++
+[source,bash]
+----
+find ~/.m2  -name "*.lastUpdated" -exec grep -q "Could not transfer" {} \; -print -exec rm {} \;
+----
+
+
+https://stackoverflow.com/questions/30615067/intellij-idea-maven-cannot-reconnect-error[Read More]
+****
+
+== `PyCharm Interpreter` duplicate name
+
+****
+. Open `jdk.table.xml`
+** `~/Library/Application Support/JetBrains/{PyCharm version}/options/jdk.table.xml`
+. Remove invalid `<jdk>` tag
+****

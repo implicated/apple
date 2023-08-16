@@ -1,0 +1,53 @@
+= AppleScript
+:date created: 2022-07-18 23:19
+:date updated: 2022-07-18 23:19
+
+== AppleScript 简介
+
+AppleScript 是一种脚本语言，内置于 macOS，可以用来控制现有的应用程序，使繁琐重复的机械操作自动化。AppleScript 语法简单，接近自然语言，同时语法查询也非常方便。
+
+AppleScript 与其他脚本语言 (例如 Python、JavaScript、Bash 等等) 不同，AppleScript 最显著的特点就是可以控制现有的应用程序，以减少我们重复的操作。例如我想给同事发送我打开的所有 Chrome 标签页的 URL，这通过其他脚本语言不容易实现，但通过 AppleScript 可方便实现。
+
+== 官网文档
+
+https://help.apple.com/applescript/mac/10.9/[Help]
+
+https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html[Developer]
+
+https://macosxautomation.com/[macOS Automation]
+
+https://gist.github.com/ccstone/716173d330caa118d09c[References For Learning & Using Applescript]
+
+== Mac键盘映射
+
+image::flow/key-codes.png[Mac键盘映射]
+
+== Ref
+
+[source,applescript]
+----
+tell application "System Events"
+	get name of every process
+end tell
+
+tell application "Finder"
+	tell application "Finder" to open ("/Users/z3/Library/Caches/com.nssurge.surge-mac/" as POSIX file)
+end tell
+----
+
+[source,bash]
+----
+osascript -e 'tell application "System Events" to get name of every process'
+osascript -e 'tell application "System Events" to get the POSIX path of file of every process'
+----
+
+____
+https://www.notion.so/AppleScript-c07b90f850ea42e990b3ea2333f9b252[Notion]
+
+https://eastmanreference.com/complete-list-of-applescript-key-codes[Mac键盘映射]
+
+https://gcsnnb.github.io/2020/09/12/%E8%81%8A%E4%B8%80%E8%81%8A%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80%EF%BC%9AAppleScript[语法参考]
+____
+
+
+

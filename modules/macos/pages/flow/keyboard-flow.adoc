@@ -1,0 +1,49 @@
+= Keyboard Flow
+
+== Mac
+
+[cols=2]
+|===
+h| kbd:[Ctrl+a]
+h| Home
+h| kbd:[Ctrl+e]
+h| End
+h| kbd:[Ctrl+n]
+h| Down
+h| kbd:[Ctrl+p]
+h| Up
+h| kbd:[Ctrl+b]
+h| Left
+h| kbd:[Ctrl+f]
+h| Right
+|===
+
+== Additional
+
+[cols=3]
+|===
+h| kbd:[Ctrl+a]
+h| Home
+.6+^.^h| karabiner-elements +
+(skip jetBrains MacVim)
+h| kbd:[Ctrl+e]
+h| End
+h| kbd:[Ctrl+n]
+h| Down
+h| kbd:[Ctrl+p]
+h| Up
+h| kbd:[Ctrl+b]
+h| Left
+h| kbd:[Ctrl+f]
+h| Right
+
+| kbd:[Ctrl+Opt+Shift+Cmd+k]
+| Scroll Down
+.2+^.^| Homerow Scroll
+| kbd:[Ctrl+Opt+Shift+Cmd+j]
+| Scroll Up
+
+h| kbd:[Ctrl+p]
+h|
+h|
+|===

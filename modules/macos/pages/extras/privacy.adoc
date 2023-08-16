@@ -1,0 +1,10 @@
+= Privacy
+
+== Wechat
+
+禁止 Wechat 写本地日志
+
+[source,bash]
+----
+chmod 400 /Users/z3/Library/Containers/com.tencent.xinWeChat/Data/Library/Caches/com.tencent.xinWeChat/2.0b4.0.9/log
+----

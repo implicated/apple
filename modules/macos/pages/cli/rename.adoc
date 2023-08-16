@@ -1,0 +1,17 @@
+= Rename
+
+== Install
+
+[source,zsh]
+----
+brew install rename
+----
+
+== Example
+
+[source,zsh]
+----
+$ rename -nve 's/\s/-/g' *.adoc
+$ 'audio and video.adoc' would be renamed to 'audio-and-video.adoc'
+----
+

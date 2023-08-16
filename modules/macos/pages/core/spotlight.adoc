@@ -1,0 +1,39 @@
+= Spotlight
+
+== Spotlight 隐私文件夹无法删除
+
+`spotlight` 隐私文件夹手动删除之后会自动加回来，原因是：添加隐私文件夹后修改过文件夹名字的大小写，而 `macOS` 文件系统不区分大小写，解决办法：使用命令行手动删除 `spotlight` 中配置的路径。
+
+== 手动修改 `Spotlight` 配置
+
+.编辑 `Spotlight` 配置
+[source,shell,indent=0]
+----
+# 读取当前配置信息
+sudo /usr/libexec/PlistBuddy -c "Print :Exclusions" /System/Volumes/Data/.Spotlight-V100/VolumeConfiguration.plist
+
+# 添加一条数据，0 表示在开始添加
+sudo /usr/libexec/PlistBuddy -c "Add :Exclusions:0 string '/path/to/folder'" /System/Volumes/Data/.Spotlight-V100/VolumeConfiguration.plist
+
+# 删除一条数据，0 表示数组中的第一项
+sudo /usr/libexec/PlistBuddy -c "Delete :Exclusions:0 string" /System/Volumes/Data/.Spotlight-V100/VolumeConfiguration.plist
+----
+
+.重启 `Spotlight`
+[source,shell,indent=0]
+----
+# com.apple.metadata.mds 是 spotlight 的守护进程
+sudo launchctl stop com.apple.metadata.mds
+sudo launchctl start com.apple.metadata.mds
+----
+
+.禁用 `spotligh`
+[source,shell,indent=0]
+----
+mdutil -i off /
+----
+
+== Reference
+
+[quote]
+https://apple.stackexchange.com/questions/87090/how-to-programatically-add-folder-to-spotlight-do-not-index[How to programatically add folder to Spotlight "do not index"?]

@@ -1,0 +1,27 @@
+= MacOS `.plist` File
+
+== plutil
+
+[source,bash]
+----
+plutil -help
+
+# .plist to .xml(extension no change)
+plutil -convert xml1 44.plist
+# .xml to .plist(extension no change)
+plutil -convert binary 44.plist
+----
+
+== PlistBuddy
+
+[source,shell,indent=0,options=nowrap]
+----
+/usr/libexec/PlistBuddy -help
+
+
+plistbuddy -c 'set CFBundleName AsciiDoc' /Applications/AsciiDoc.app/Contents/Info.plist
+
+plistbuddy -c 'set CFBundleIdentifier com.jetbrains.asciidoc' /Applications/AsciiDoc.app/Contents/Info.plist
+----
+
+https://www.sethvargo.com/replace-icons-osx[Read More]

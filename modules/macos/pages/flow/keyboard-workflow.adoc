@@ -1,0 +1,23 @@
+== Keyboard Workflow
+
+== Order
+
+*Karabiner* -> *Keyboard Maestro* -> *Homerow* -> *Alfred*
+
+== https://karabiner-elements.pqrs.org/docs/[Karabiner]
+
+xref:../mac/software/Karabiner Elements.adoc[See more]
+
+link:../1.txt[See more]
+
+* 在键盘输入时替换，全局无冲
+* 可以和其它键组合成快捷键
+
+== https://wiki.keyboardmaestro.com/User_Manual[Keyboard Maestro]
+
+* 在键盘输入后替换
+* 不可以和其它键组合成快捷键
+
+== ss
+
+include::https://raw.githubusercontent.com/asciidoctor/asciidoctor/main/README.adoc[raw]

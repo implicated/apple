@@ -1,0 +1,12 @@
+= MacOS Kernel
+:date created: 2022-07-23 19:37
+:date updated: 2022-07-23 19:44
+
+https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/About/About.html[Apple Guide]
+
+https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html[`.plist` File]
+
+. Book
+
+    *OS Internals
+    Mac OS X and iOS Internals: To the Apple's Core

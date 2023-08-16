@@ -1,0 +1,123 @@
+= MacOS Defaults Command
+:date created: 2022-07-19 13:15
+:date updated: 2022-07-24 14:41
+
+== 1. Introduce
+
+The macOS defaults Terminal command is a tool that is used to view and modify the settings used by macOS and applications.
+These settings are stored in `.plist` files, path: `/Users/z3/Library/Preferences`.
+
+[source,bash,indent=0,options=nowrap]
+----
+defaults -help
+# lists all domains
+defaults domains
+# lists match com.apple.input domains
+defaults domains |sed 's/,/\n/g'|grep com.apple.input
+# lists all entries containing word
+defaults find <word>
+# read write delete
+defaults read[write][delete] domains <word>
+----
+
+== Ref
+
+____
+https://macos-defaults.com/
+
+http://hints.macworld.com/article.php?story=20131123074223584
+
+http://kuboard.iqihang.top/kubernetes/k8s-test/namespace/ark/workload/view/Deployment/app-deploy
+
+https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/EventOverview/TextDefaultsBindings/TextDefaultsBindings.html[Default bingings]
+____
+
+== 2. Collection
+
+== Hide  `Macintosh HD/用户`  in user path
+
+____
+https://www.alfredapp.com/help/workflows/utilities/filter/[过滤器实用程序 - Alfred 帮助和支持]
+____
+
+[source,bash,indent=0,options=nowrap]
+----
+defaults write com.apple.finder PathBarRootAtHome -bool yes && killall Finder
+----
+
+== Press down continuous input
+
+Close input phonetic symbol is open long press continuous input.
+
+[source,bash]
+----
+# Open global
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# Close global
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool true
+
+# Bundle identifier in `/Applications/<appname>.app/Contents/Info.plist' Bundle identifier
+# Open only app(eg:IDEA)
+defaults write <Bundle identifier> ApplePressAndHoldEnabled -bool false
+# Close only app(eg:IDEA)
+defaults write <Bundle identifier> ApplePressAndHoldEnabled -bool true
+----
+
+== Modify LaunchPad Layout
+
+[source,bash]
+----
+# Modify layout 6*10
+deafults write com.apple.dock springboard-rows -int 6;
+deafults write com.apple.dock springboard-columns -int 10;
+killall Dock;
+
+# Reset layout
+deafults write com.apple.dock springboard-rows deafult;
+deafults write com.apple.dock springboard-columns default;
+killall Dock;
+
+# Reset all
+defaults write com.apple.dock ResetLaunchPad -bool true;
+killall Dock
+----
+
+== Set 双拼方案 is 自然码
+
+[source,bash]
+----
+defaults write com.apple.inputmethod.CoreChineseEngineFramework shuangpinLayout 5
+----
+
+== Prevent Command-I/Command-Shift-I from opening Mac Mail when in browser?
+
+[source,bash]
+----
+# Valid
+defaults write com.google.Chrome NSUserKeyEquivalents -dict-add 'Email Link' '\0'
+# Invalid
+defaults write com.apple.Safari NSUserKeyEquivalents -dict-add 'Email Link to This Page' '\0' 'Email This Page' '\0'
+----
+
+== Set System Language
+
+[source,bash]
+----
+locale #查看当前使用语言
+sudo languagesetup #回车输入密码后显示语言列表，输入对应序号后回车即可设置
+----
+
+== Finder Always Show `/Library`
+
+[source,bash]
+----
+chflags nohidden /Library/ #显示
+chflags hidden /Library/ #隐藏
+----
+
+== Cancel Chrome Slide
+
+[source,bash]
+----
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+----

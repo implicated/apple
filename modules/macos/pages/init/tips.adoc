@@ -1,0 +1,120 @@
+= MacOS Tips
+
+== Net
+
+[source,bash]
+----
+# replace telnet
+nc -v 1.1.1.1 1000
+# view port
+lsof -ni :8001
+----
+
+== Clean up invalid icons on the launchpad
+
+[source,bash]
+----
+# Select launchpad directory
+find /private/var/folders -type d 2>/dev/null | grep com.apple.dock.launchpad
+# Enter the directory to the find result
+cd /private/var/folders/cl/1fh29_392rvdr4lr1zkx2j680000gn/0/com.apple.dock.launchpad/db
+# Delete app icon data (ps:epic is need clean app name)
+## sqlite3 db "select * from sqlite_master where type='table' and name='apps';"
+sqlite3 db "select * from apps where title like 'epic%';"
+sqlite3 db "delete from apps where title like 'epic%';"
+# Reopen dock
+killall Dock
+----
+
+== Terminal Proxy Switch
+
+Add the following code to the `~/.zshrc`
+
+[,shele]
+----
+function setproxy() {
+        export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;export all_proxy=sock5://127.0.0.1:6153
+}
+function unsetproxy() {
+        unset https_proxy http_proxy all_proxy
+}
+----
+
+== Show WiFi Password
+
+[source,bash]
+----
+# Search keychains-db
+security find-generic-password -ga wifi-name| grep "password:"
+----
+
+== Reset the DNS cache
+
+[source,bash]
+----
+sudo killall -HUP mDNSResponder
+----
+
+== LaunchCTL
+
+[source,bash]
+----
+# link: http**s://www.fythonfang.com/blog/2021/4/19/mac-launchd-daemons-and-agents-tutorial
+launchctl list
+launchctl list|grep -v com.apple|grep -v setapp|sort -k 3
+----
+
+[cols=2*]
+|===
+| ![[CleanShot 2022-04-11 at 23.31.14.png
+| 650x300]]
+|===
+
+== Uninstall
+
+[source,bash]
+----
+#### User Home
+# Log
+~/Library/Logs/
+~/Library/Logs/Contexts
+# User Data
+~/Library
+~/Library/WebKit/
+~/Library/HTTPStorages/
+# components and content
+~/Library/Application Support
+~/Library/Application Support/CrashReporter
+~/Library/Application Scripts
+~/Library/Saved Application State
+# Cache
+~/Library/Caches
+# Sandbox
+~/Library/Containers
+~/Library/Group Containers/
+# Launch
+~/Library/LaunchAgents
+# app profiles
+~/Library/Preferences
+~/Library/PreferencePanes
+# share
+/Users/Shared/
+
+#### System
+# User Data
+/Library
+# components and content
+/Library/Application Support
+/Library/PrivilegedHelperTools/
+/private/var/folders/cl/1fh29_392rvdr4lr1zkx2j680000gn/C/com.fluidapp.FluidApp2.DeepL
+/private/var/folders/cl/1fh29_392rvdr4lr1zkx2j680000gn/T/.org.openvpn.client.app.KHA2DY
+/private/var/db/receipts/
+# Extensions
+/Library/Extensions
+# Launch
+/Library/LaunchAgents
+/Library/LaunchDaemons
+# app profiles
+/Library/Preferences
+/Library/PreferencePanes
+----

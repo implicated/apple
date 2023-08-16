@@ -1,0 +1,28 @@
+= Wu Bi
+:date created: 2022-06-13 00:24
+:date updated: 2022-06-21 01:26
+
+== 原则
+
+. 打单字
+. 关闭词频调整，固定位置
+. 地名打词组
+. 打无重码的词组，四键空格上屏
+
+== 单字分类
+
+. link:https://raw.githubusercontent.com/Implicated/86wubi/master/text/base.txt[字根字]  共计24
+. link:https://raw.githubusercontent.com/Implicated/86wubi/master/text/first.txt[一级简码]  共计25
+. link:https://raw.githubusercontent.com/Implicated/86wubi/master/text/second.txt[二级简码]  共计606
+. link:https://raw.githubusercontent.com/Implicated/86wubi/master/text/third.txt[三级简码]  共计1060
+. link:https://raw.githubusercontent.com/Implicated/86wubi/master/text/all.txt[全码]  共计xxx
+
+== 练习
+
+* https://implicated.icu/86wubi[自定义练习]
+
+* https://raw.githubusercontent.com/Implicated/86wubi/master/text/error.txt[易错字]
+
+* https://raw.githubusercontent.com/Implicated/86wubi/master/text/common.txt[2500常用字大全]
+
+* https://raw.githubusercontent.com/Implicated/86wubi/master/text/secondary.txt[1000次常用字大全]

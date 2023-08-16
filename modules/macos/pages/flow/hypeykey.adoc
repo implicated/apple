@@ -1,0 +1,440 @@
+= HyperKey
+:!table-caption:
+
+****
+infra < sub < hypo < normal < ultra < super < hyper
+****
+
+kbd:[UltraKey] to kbd:[Ctrl+Shift].
+
+kbd:[SuperKey] to kbd:[Ctrl+Shift+Opt].
+
+kbd:[HyperKey] to kbd:[Ctrl+Shift+Opt+Cmd].
+
+image::flow/key-codes.png[link=https://eastmanreference.com/complete-list-of-applescript-key-codes]
+
+.Zero
+[cols = "a,a,2a,2a"]
+|===
+| Key | Code | HyperKey | SuperKey
+
+| kbd:[F1]
+|
+|
+|
+| kbd:[F2]
+|
+|
+|
+| kbd:[F3]
+|
+|
+|
+| kbd:[F4]
+|
+|
+|
+| kbd:[F5]
+|
+|
+|
+| kbd:[F6]
+|
+|
+|
+| kbd:[F7]
+|
+|
+|
+| kbd:[F8]
+|
+|
+|
+| kbd:[F9]
+|
+|
+|
+| kbd:[F10]
+|
+|
+|
+| kbd:[F11]
+|
+|
+|
+| kbd:[F12]
+|
+|
+|
+| kbd:[F13]
+| 105
+|
+|
+| kbd:[F14]
+| 107
+|
+|
+| kbd:[F15]
+| 113
+|
+|
+| kbd:[F16]
+| 106
+|
+|
+| kbd:[F17]
+| 64
+|
+|
+| kbd:[F18]
+| 79
+|
+|
+| kbd:[F19]
+| 80
+|
+|
+| kbd:[F20]
+| 90
+|
+|
+|===
+
+.One
+[cols = "a,a,2a,2a"]
+|===
+| Key | Code | HyperKey | SuperKey
+
+| kbd:[`]
+|
+|
+|
+| kbd:[1]
+|
+|
+[.apple]
+Switch to Desktop 1
+|
+| kbd:[2]
+|
+|
+[.apple]
+Switch to Desktop 2
+|
+| kbd:[3]
+|
+|
+[.apple]
+Switch to Desktop 3
+|
+| kbd:[4]
+|
+|
+[.apple]
+Switch to Desktop 4
+|
+| kbd:[5]
+|
+|
+[.apple]
+Switch to Desktop 5
+|
+| kbd:[6]
+|
+|
+[.apple]
+Move left a space
+|
+| kbd:[7]
+|
+|
+[.apple]
+Move right a space
+|
+| kbd:[8]
+|
+|
+|
+| kbd:[9]
+|
+|
+|
+| kbd:[0]
+|
+|
+|
+| kbd:[-]
+|
+|
+|
+| kbd:[=]
+|
+|
+|
+| kbd:[BS]
+|
+|
+|
+|===
+
+.Two
+[cols = "a,a,2a,2a"]
+|===
+| Key | Code | HyperKey | SuperKey
+
+| kbd:[Q]
+|
+|
+|
+| kbd:[W]
+|
+|
+|
+| kbd:[E]
+|
+|
+|
+| kbd:[R]
+|
+|
+|
+| kbd:[T]
+|
+|
+|
+| kbd:[Y]
+|
+|
+|
+| kbd:[U]
+|
+|
+|
+| kbd:[I]
+|
+|
+|
+| kbd:[O]
+|
+|
+|
+| kbd:[P]
+|
+|
+|
+| kbd:[[]
+| 33
+|
+[.bob]
+menu:Bob[Translate]
+|
+| kbd:[]]
+| 30
+|
+[.bob]
+menu:Bob[OCR]
+|
+| kbd:[\ ]
+| 42
+|
+[.bob]
+menu:Bob[Input]
+|
+|===
+
+.Three
+[cols = "a,a,2a,2a"]
+|===
+| Key | Code | HyperKey | SuperKey
+
+| kbd:[A]
+|
+|
+|
+| kbd:[S]
+|
+|
+|
+| kbd:[D]
+|
+|
+|
+| kbd:[F]
+|
+|
+|
+| kbd:[G]
+|
+|
+|
+| kbd:[H]
+|
+|
+|
+| kbd:[J]
+|
+|
+[.scroller]
+menu:Homerow Scroller[Jump Down]
+|
+[.scroller]
+menu:Homerow Scroller[Scroll Down]
+| kbd:[K]
+|
+|
+[.scroller]
+menu:Homerow Scroller[Jump Up]
+|
+[.scroller]
+menu:Homerow Scroller[Scroll Up]
+| kbd:[L]
+|
+|
+|
+| kbd:[;]
+|
+|
+|
+| kbd:[']
+|
+|
+|
+| kbd:["]
+|
+|
+|
+| kbd:[Enter]
+|
+|
+[.rectangle]
+menu:Rectangle[Maximize]
+|
+[.rectangle]
+menu:Rectangle[Restore]
+|===
+
+.Four
+[cols = "a,a,2a,2a"]
+|===
+| Key | Code | HyperKey | SuperKey
+
+| kbd:[Z]
+|
+|
+[.keyboard-maestro]
+menu:Keyboard Maestro[Trigger macro by name]
+|
+| kbd:[X]
+|
+|
+|
+| kbd:[C]
+|
+|
+|
+| kbd:[V]
+|
+|
+|
+| kbd:[B]
+|
+|
+|
+| kbd:[N]
+|
+|
+|
+| kbd:[M]
+|
+|
+|
+| kbd:[,]
+|
+|
+|
+| kbd:[.]
+|
+|
+|
+| kbd:[/]
+|
+|
+|
+|===
+
+.Five
+[cols = "a,a,2a,2a"]
+|===
+| Key | Code | HyperKey | SuperKey
+
+| kbd:[Space]
+|
+|
+[.apple]
+Apple Spotlight
+|
+| kbd:[Left]
+|
+|
+[.rectangle]
+menu:Rectangle[Left Half]
+|
+[.rectangle]
+menu:Rectangle[Top Left]
+| kbd:[Right]
+|
+|
+[.rectangle]
+menu:Rectangle[Right Half]
+|
+[.rectangle]
+menu:Rectangle[Top Right]
+| kbd:[Up]
+|
+|
+[.rectangle]
+menu:Rectangle[Top Half]
+|
+[.rectangle]
+menu:Rectangle[Bottom Left]
+| kbd:[Down]
+|
+|
+[.rectangle]
+menu:Rectangle[Bottom Half]
+|
+[.rectangle]
+menu:Rectangle[Bottom Right]
+| kbd:[Home]
+| 115
+|
+|
+| kbd:[End]
+| 119
+|
+|
+| kbd:[Page Up]
+|
+[.soft.two]
+116
+|
+|
+| kbd:[Page Down]
+|
+[.soft.one]
+121
+|
+|
+|===
+
+++++
+<style>
+.apple {color: black}
+.bob {color: #C02BE0}
+.rectangle {font-size:1.1em;color: red}
+.scroller {color: dodgerblue}
+.keyboard-maestro {color: #41af46}
+.soft.one{color: #1d9ff0}
+.soft.two{color: #1d9ff0}
+</style>
+++++

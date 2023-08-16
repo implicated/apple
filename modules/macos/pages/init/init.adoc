@@ -1,0 +1,101 @@
+= Init
+:toc:
+
+== General
+
+** menu:Accessibility[Pointer Control > Trackpad Options... > Enable dragging > three finger drag]
+** menu:Sharing[coumputer name]
+** menu:Sound[Play sound on startup]
+
+== Set System Param
+
+* Set Language
++
+[source,zsh,indent=0,options=nowrap]
+----
+# 查看当前使用语言
+lcale
+# 回车输入密码后显示语言列表，输入对应序号后回车即可设置
+sudo languagesetup
+----
++
+NOTE: mac分为本地域语言（主语言）和用户域语言（次语言），一般情况下你登录了账户，在偏好设置里面改的语言是"`次语言`"，不包括登录界面等系统级的显示语言，而使用以上终端修改的是整个系统的所有语言显示，最后，记得要重启。
+
+* [.line-through]#finder显示完整路径#
++
+[%collapsible]
+====
+[source,zsh,indent=0,options=nowrap]
+----
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true;killall finder #显示
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool false ;killall finder #隐藏
+----
+====
+
+* finder始终显示用户资料库
++
+[source,zsh,indent=0,options=nowrap]
+----
+chflags nohidden /Library/ #显示
+chflags hidden /Library/ #隐藏
+----
+
+* 取消chrome 左右滑 前进后退
++
+[source,zsh,indent=0,options=nowrap]
+----
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+----
+
+* 使用全部来源软件
++
+[source,zsh,indent=0,options=nowrap]
+----
+sudo spctl --master-disable
+----
+
+* 终端隐藏命令：
++
+[source,zsh,indent=0,options=nowrap]
+----
+# 显示
+defaults write com.apple.Dock showhidden -bool TRUE;
+killall Dock
+# 隐藏
+defaults write com.apple.Dock showhidden -bool FALSE;
+killall Dock
+----
+
+== Install
+
+* https://docs.brew.sh/Installation[Homebrew^]
+** Cask
++
+image::init/brew-cask.png[]
+** formula
++
+image::init/brew-formula.png[]
+* zsh and https://github.com/ohmyzsh/ohmyzsh[on-my-zsh]
++
+.View current installed shells
+[source,bash,indent=0,options=nowrap]
+----
+cat /etc/shells
+echo $0
+----
++
+.Install zsh
+[source,bash,indent=0,options=nowrap]
+----
+yum install zsh
+----
++
+.Install on-my-zsh
+[source,bash,indent=0,options=nowrap]
+----
+curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+----
+* Chrome
+** Chrome plugins use Google account sync.
+** tampermonkey use Google Drive sync.
+

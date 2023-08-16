@@ -1,0 +1,60 @@
+= Go
+
+== https://github.com/moovweb/gvm[GVM [Go Version Manage\]^]
+
+=== Install
+
+.Install
+[source,zsh]
+----
+zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+----
+
+
+image::env/go-install-homebrew.png[]
+
+[IMPORTANT]
+====
+* https://docs.google.com/document/d/1OaatvGhEAq7VseQ9kkavxKNAfepWy2yhPUBs96FGV28/edit[``Go1.5+``移除了C编译器，代之以用Go编写的编译器^]，也就是说需要用 `Go` 安装 `Go`。
+* `ARM Mac` 直接用 `GVM` 安装 `Go1.4` 会抛出 `Bad CPU type in executable` 异常。
+* 可以先用 `Homebrew` 安装 `Go，`再用 `GVM` 安装 `Go`，之后就可以卸载用 `Homebrew` 安装的 `Go` 了。
++
+[source,zsh,indent=0]
+----
+brew install go && gvm install go1.20.1 && gvm use go1.20.1 --default && brew uninstall go
+----
+* https://github.com/moovweb/gvm/issues/417[Ref]
+====
+
+=== Usage
+
+.Help
+[source,zsh,indent=0]
+----
+gvm help
+gvm [command] -h
+----
+
+.Usage
+[source,zsh,indent=0]
+----
+gvm version    - print the gvm version number
+gvm get        - gets the latest code (for debugging)
+gvm use        - select a go version to use (--default to set gvm permanently)
+gvm diff       - view changes to Go root
+gvm help       - display this usage text
+gvm implode    - completely remove gvm
+gvm install    - install go versions
+gvm uninstall  - uninstall go versions
+gvm cross      - install go cross compilers
+gvm linkthis   - link this directory into GOPATH
+gvm list       - list installed go versions
+gvm listall    - list available versions
+gvm alias      - manage go version aliases
+gvm pkgset     - manage go packages sets
+gvm pkgenv     - edit the environment for a package set
+----
+
+== Ref
+
+https://juejin.cn/post/6844903718123470861[Ref]

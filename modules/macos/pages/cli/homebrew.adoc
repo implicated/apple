@@ -1,0 +1,109 @@
+= Homebrew
+
+== Usages
+
+=== General
+
+[source,bash]
+----
+brew search TEXT|/REGEX/
+brew info [formula|cask...]
+brew install formula|cask...
+brew install --verbose --debug formula|cask
+brew reinstall formula|cask...
+brew upgrade [formula|cask...]
+brew uninstall formula|cask...
+brew list [--formulae| --cask]
+----
+
+[source,bash,indent=0]
+----
+brew outdated
+brew update
+----
+
+=== Help
+
+https://docs.brew.sh[Home]
+
+[source,bash]
+----
+man brew
+brew help [COMMAND]
+brew commands
+----
+
+=== Configuration
+
+[source,bash]
+----
+brew analytics off
+brew config
+brew doctor
+brew cleanup [formula|cask...]
+brew autoremove
+brew deps --tree --eval-all
+brew pin installed_formula
+
+----
+
+== Migration
+
+* old computer：`brew bundle dump`
+* new computer: `brew bundel`
+
+== Install Old Version Software
+
+. Download `xx.rb`
++
+IMPORTANT: The file name must match the software name.
+. Modify version (`Vim xx.rb`)
+. Install (Error)
+* Obtain `SHA256` from error message `Actual: xxxxx`
+* Modify `SHA256` code to `xxxxx` (`vim xx.rb`)
+. Install (Success)
+
+== Catalogue
+
+=== Initial [2023-01-19 15:59:13]
+
+`pyenv` `git` `nginx`
+
+`jq` `pstree` `rename` `httping`
+
+`zsh-autosuggestions` `bluetoothconnector` `switchaudio-osx`
+
+image::cli/brew_1.png[]
+
+=== Install Graphviz
+
+image::cli/brew_2.png[Installed]
+
+=== Install Tree
+
+image::cli/brew_3.png[]
+
+=== Install GitHub CLI
+
+image::cli/brew_4.png[]
+
+=== Install ImageMagick
+
+.Required Dependencies
+image::cli/brew_dep_1.png[]
+
+image::cli/brew_5.png[]
+
+=== Install Hugo
+
+image::cli/brew_6.png[]
+
+=== Install Asciidoctor
+
+image::cli/brew_7.png[]
+
+=== Install grpcurl
+
+image::cli/brew_8.png[]
+
+

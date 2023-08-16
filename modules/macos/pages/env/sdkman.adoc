@@ -1,0 +1,58 @@
+= SDKMan
+
+== Install or Uninstall
+
+[source,shell]
+----
+# default localtion
+curl -s "https://get.sdkman.io" | bash
+# custom localtion
+export SDKMAN_DIR="/usr/local/sdkman" && curl -s "https://get.sdkman.io" | bash
+# load environment variable
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+# ensure installation successed
+sdk version
+# backup
+tar zcvf ~/sdkman-backup_$(date +%F-%kh%M).tar.gz -C ~/ .sdkman
+# uninstall
+rm -rf ~/.sdkman
+and delete sdkman code snipper from .zshrc
+----
+
+== Use
+
+[source,bash]
+----
+sdk help
+sdk offline enable
+sdk offline disable
+
+sdk list
+sdk list java
+
+sdk install java 8.0.322-zulu
+sdk i java 8.0.322-zulu
+sdk install java 8-zulu /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+sdk uninstall java 8.0.322
+
+sdk default java 8.0.322-zulu
+sdk d java 8.0.322-zulu
+sdk current
+sdk current java
+
+sdk home java 8.0.322-zulu
+----
+
+== ARM JDK
+
+* https://www.azul.com/downloads/?version=java-8-lts&os=macos&architecture=arm-64-bit&package=jdk&show-old-builds=true[Zulu JDK]
+
+____
+王俊使用：8u275b01[Zulu: 8.50.0.1017]
+____
+
+== Ref
+
+____
+官网： https://sdkman.io
+____

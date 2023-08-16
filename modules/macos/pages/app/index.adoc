@@ -1,0 +1,8 @@
+= Setting Development Environment
+
+== xref:partial$java.adoc[Java]
+
+== xref:partial$node.adoc[Node]
+
+== xref:./partial/python.adoc[Python]
+

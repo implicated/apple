@@ -1,0 +1,123 @@
+= Node
+
+== nvm[Node Version Manage]
+
+[source,shell]
+----
+nvm help
+# 安装指定版本，可模糊安装，如：安装v6.2.0，既可nvm install v6.2.0，又可nvm install 6.2
+nvm install
+# 删除已安装的指定版本，语法与install类似
+nvm uninstall
+# 切换使用指定的版本node
+nvm use
+# 列出所有安装的版本
+nvm ls
+# 列出所以远程服务器的版本（官方node version list）
+nvm ls-remote
+# 列出所以远程服务器的长期支持版本（官方node version list）
+nvm ls-remote --lts
+# 显示当前的版本
+nvm current
+# 给不同的版本号添加别名
+nvm alias
+# 删除已定义的别名
+nvm unalias
+# 在当前版本node环境下，重新全局安装指定版本号的npm包
+nvm reinstall-packages
+----
+
+== npm[Node Package Manage]
+
+[source,shell]
+----
+# 查看某条命令的快速帮助
+npm <command> -h
+# 查看某条命令的详细帮助
+npm help <command>
+# 查看包的安装路径
+
+npm root
+# 管理npm的配置路径
+npm config
+npm config ls -l|grep audit
+npm set audit false
+# 管理模块的缓存
+npm cache
+# 显示package.json的语法
+npm package.json
+
+# 搜索模块
+npm search [search terms..]
+# 安装模块
+npm install
+# 卸载模块
+npm uninstall
+# 更新模块
+npm update
+# 检查模块是否已经过时
+npm outdated
+# 查看安装的模块
+npm ls
+
+# 在项目中引导创建一个package.json文件
+npm init
+# 启动模块
+npm start
+# 停止模块
+npm stop
+# 重新启动模块
+npm restart
+# 测试模块
+npm test
+# 查看模块版本
+npm version
+# 查看模块的注册信息
+npm view
+
+# 用户登录
+npm adduser
+# 发布模块
+npm publish
+# 在发布的包上设置访问级别
+npm access
+----
+
+== nrm[Node Registry Manage]
+
+[source,shell]
+----
+npm install -g nrm  # nrm 安装
+nrm ls  # 列出可用的源
+nrm use taobao # 选择国内淘宝的源
+nrm test npm # 测试速度
+nrm add taobao http://192.168.10.127:8081/repository/npm-public/  # 添加源
+nrm del taobao # 删除对应的源
+----
+
+== npx[Node Package Execute]
+
+`npm` version 5.2.0 add command, Run a command from a local or remote npm package
+
+[source,shell]
+----
+# old
+npm install -g create-react-app
+create-react-app my-app
+# new
+npx create-react-app my-app
+# more information
+man npx
+----
+
+== Node
+
+[source,shell]
+----
+node -v
+node -h
+----
+
+== Ref
+
+https://juejin.cn/post/6844903718123470861[Ref]

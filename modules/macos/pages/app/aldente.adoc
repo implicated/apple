@@ -1,0 +1,7 @@
+= https://apphousekitchen.com/[AlDente^]
+
+控制电池电量保持在某个值
+
+== Alternatives
+
+https://github.com/actuallymentor/battery[Battery charge limiter for Apple Silicon Macbook devices^]

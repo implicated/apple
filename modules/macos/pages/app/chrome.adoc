@@ -1,0 +1,63 @@
+= Chrome
+:icons: font
+
+== Lock Version
+
+. Remove app and user date
++
+[source,bash]
+----
+rm -rf /Applications/Google\ Chrome.app
+rm -rf ~/Library/Application\ Support/Google
+rm -rf ~/Library/Preferences/com.google.Keystone.Agent.plist
+----
+
+. Disable auto update
++
+[source,bash]
+----
+cd /Library/Google
+rm -rf GoogleSoftwareUpdate/ ;mkdir GoogleSoftwareUpdate/;sudo chown nobody:nogroup GoogleSoftwareUpdate;sudo chmod 000 GoogleSoftwareUpdate
+cd ~/Library/Google
+rm -rf GoogleSoftwareUpdate/ ;mkdir GoogleSoftwareUpdate/;sudo chown nobody:nogroup GoogleSoftwareUpdate;sudo chmod 000 GoogleSoftwareUpdate
+
+# Optional
+cd /Library/
+sudo chown nobody:nogroup Google; sudo chmod 000 Google
+
+cd ~/Library/ sudo chown nobody:nogroup Google; sudo chmod 000 Google
+----
+. Download old version
++
+https://google-chrome.en.uptodown.com/mac/versions[Download Web 1]
++
+https://www.slimjet.com/chrome/google-chrome-old-version.php[Download Web 2]
+
+. Disable "chrome is out of date" notification (Deprecated)
++
+[source,bash]
+----
+mv Google\ Chrome Google\ Chrome.real
+vim Google\ Chrome # add below script context
+chmod a+x Google\ Chrome
+----
+
+ script context
++
+[source,bash]
+----
+#!/bin/bash
+"`dirname "$0"`"/Google\ Chrome.real --simulate-outdated-no-au='Tue, 31 Dec 2099 23:59:59 GMT' &
+----
+
+== Ref
+
+https://chromium.cypress.io[View Version]
+
+https://support.google.com/chrome/a/answer/7591084[Manage Chrome updates (Mac)]
+
+https://stackoverflow.com/questions/27962454/disable-chrome-is-out-of-date-notification[kiosk - Disable "chrome is out of date" notification - Stack Overflow]
+
+https://peter.sh/experiments/chromium-command-line-switches/#check-for-update-interval[List of Chromium Command Line Switches « Peter Beverloo]
+
+https://www.chromium.org/developers/how-tos/run-chromium-with-flags/[Run Chromium with flags]

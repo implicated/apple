@@ -1,0 +1,26 @@
+= JQ
+
+== Install
+
+[source,zsh]
+----
+brew install jq
+----
+
+== Example
+
+[source,bash,indent=0]
+----
+echo '{"name": "John", "age": 30}' | jq '. + {"city": "New York"}'
+
+echo '[{"name": "John", "age": 30}, {"name": "Jane", "age": 25}]' | jq 'map(. + {"city": "New York"})'
+
+echo '[{"name": "John", "age": 30}, {"name": "Jane", "age": 25}]' | jq '. + [{ "name": "Bob", "age": 40 }]'
+
+echo '[{ "title": "GitHub", "arg": "https://github.com/Implicated?tab=repositories" }]' | jq '.[] + { "match": "github" }'
+----
+
+[source,json,indent=0,options=nowrap]
+----
+{"hello": "world"}
+----

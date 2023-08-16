@@ -1,0 +1,29 @@
+= Nginx
+
+== Command
+
+[source,bash]
+----
+# Install
+brew install nginx
+# Start
+brew services start nginx
+# Stop
+brew services stop nginx
+# Restart
+brew services restart nginx
+# Reload configure
+nginx -s reload
+# Check configure
+nginx -t
+----
+
+== Configuration file location
+
+[source,bash]
+----
+# Main configurea
+/opt/homebrew/etc/nginx/nginx.conf
+# Other configure
+/opt/homebrew/etc/nginx/servers/.
+----

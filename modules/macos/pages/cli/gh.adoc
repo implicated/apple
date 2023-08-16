@@ -1,0 +1,39 @@
+= GitHub CLI
+
+== Install
+
+[source,zsh]
+----
+brew install gh
+----
+
+== Config
+
+[source,zsh,indent=0]
+----
+gh auth login
+----
+
+== Example
+
+[source,zsh,indent=0]
+----
+# Shwo help
+gh help
+
+# Show the name,page url in all public repositories.
+gh repo list --visibility public --json name,homepageUrl
+
+# Search stars >100000 in GitHub
+gh search repos "stars:>100000" --json name
+# GitHub CLI extension
+gh ext list
+gh ext search
+gh ext install gennaro-tedesco/gh-s
+
+gh config list
+----
+
+== Reference
+
+https://cli.github.com/manual/gh[GitHub CLI Manual^]
