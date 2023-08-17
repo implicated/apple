@@ -1,6 +1,6 @@
-= MacOS `.plist` File
+= `.plist` File
 
-== plutil
+== `plutil`
 
 [source,bash]
 ----
@@ -17,7 +17,6 @@ plutil -convert binary 44.plist
 [source,shell,indent=0,options=nowrap]
 ----
 /usr/libexec/PlistBuddy -help
-
 
 plistbuddy -c 'set CFBundleName AsciiDoc' /Applications/AsciiDoc.app/Contents/Info.plist
 

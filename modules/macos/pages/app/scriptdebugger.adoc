@@ -1,14 +1,13 @@
-:date created: 2022-07-21 00:54
-:date updated: 2022-07-21 00:56
+= Script Debugger
 
-=== Crash
+== Crash
 
 . The offline mode trial does not add days.
 . Not close the software will not trigger verification
 . Trial pop-up window is related to `LastDemoAlert` in `~/Library/Preferences/com.latenightsw.ScriptDebugger8.plist`.
- .. Cannot be greater than the current time.
- .. Click on the trial to update the field.
+.. Cannot be greater than the current time.
+.. Click on the trial to update the field.
 . StartTime is `2022-07-18 11:36:30(2022-07-18T03:37:37Z)`
 . Logic
- .. Trial Day   = SystemTime   -    StartTime
- .. Alert Trial = SystemTime   -   `LastDemoAlert` > 1
+.. Trial Day = SystemTime - StartTime
+.. Alert Trial = SystemTime -   `LastDemoAlert` > 1

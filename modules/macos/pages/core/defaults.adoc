@@ -1,6 +1,4 @@
-= MacOS Defaults Command
-:date created: 2022-07-19 13:15
-:date updated: 2022-07-24 14:41
+= `/usr/bin/defaults`
 
 == 1. Introduce
 

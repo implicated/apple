@@ -1,7 +1,7 @@
 name: apple
 title: Apple
 version: ~
+start_page: macos:init/init.adoc
 nav:
-- modules/ios/nav.adoc
 - modules/macos/nav.adoc
 - modules/vim/nav.adoc

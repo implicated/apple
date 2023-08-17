@@ -1,3 +1,5 @@
+= python
+
 == https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv[pyenv]
 
 . 只使用 `pyenv global` 管理 `python` 多个版本，而不使用 `pyenv local` 。link:https://note.qidong.name/2021/05/multiple-python/#%E9%85%8D%E7%BD%AEpyenv[查看原因]

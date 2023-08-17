@@ -1,12 +1,10 @@
 site:
   title: Implicated
-  url: https://docs.implicated.com
-  start_page: macos::index.adoc
+  url: https://apple.implicated.com
+  start_page: apple::index.adoc
 content:
   sources:
     - url: ../apple
-      start_paths:
-        - docs
       branches: HEAD
 ui:
   bundle:

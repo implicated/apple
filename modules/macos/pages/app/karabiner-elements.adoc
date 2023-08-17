@@ -1,10 +1,12 @@
-=== Grammar
+= karabiner-elements
+
+== Grammar
 
 ____
 https://zhuanlan.zhihu.com/p/63340779
 ____
 
-=== Key Code
+== Key Code
 
 [source,js]
 ----
@@ -353,7 +355,7 @@ ____
 https://github.com/pqrs-org/Karabiner-Elements/issues/925
 ____
 
-=== customize
+== customize
 
 held down `caplock` output number(j --> 5)
 

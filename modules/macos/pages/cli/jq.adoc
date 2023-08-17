@@ -7,6 +7,31 @@
 brew install jq
 ----
 
+== Usages
+
+.get value
+[source,shell,indent=0,options=nowrap]
+----
+# get SPApplicationsDataType
+system_profiler -json SPApplicationsDataType |jq '.SPApplicationsDataType'
+
+# get SPApplicationsDataType first
+system_profiler -json SPApplicationsDataType |jq '.SPApplicationsDataType[1]'
+
+# get SPApplicationsDataType first 'version' field
+system_profiler -json SPApplicationsDataType |jq '.SPApplicationsDataType[1] | .version'
+
+# get SPApplicationsDataType '_name' , 'version' field
+system_profiler -json SPApplicationsDataType |jq '.SPApplicationsDataType'| jq 'map(._name, .version)'
+
+# get GoLand info
+system_profiler -json SPApplicationsDataType |jq '.SPApplicationsDataType[]|select(._name=="GoLand")'
+
+# get GoLand version
+system_profiler -json SPApplicationsDataType |jq '.SPApplicationsDataType[]|select(._name=="GoLand")|.version'
+----
+
+
 == Example
 
 [source,bash,indent=0]

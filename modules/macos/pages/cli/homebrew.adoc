@@ -1,5 +1,16 @@
 = Homebrew
 
+== Install
+
+https://github.com/Homebrew/install[Homebrew/install: 📥 Homebrew (un)installer^]
+
+[source,shell,indent=0,options=nowrap]
+----
+xcode-select --install
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+----
+
 == Usages
 
 === General

@@ -1,24 +1,17 @@
-:date created: 2022-07-20 21:59
+= JD-GUI
 
-=== `No suitable Java version found on your system!`
+== `No suitable Java version found on your system!`
 
-[cols=2*]
-|===
-| ![[JD-GUI-1.png
-| 500x200]]
-|===
+image::app/jd-gui-1.png[width=500,height=200]
 
 . Open `/Applications/JD-GUI.app/Contents/Info.plist` .
 . Edit `+JAVAX --> JVMVersion+` .
 . Modify  `1.8+` to `1.8`.
 
-=== `You need to have JAVA installed on your Mac`
+== `You need to have JAVA installed on your Mac`
 
-[cols=2*]
-|===
-| ![[JD-GUI-2.png
-| 500x200]]
-|===
+image::app/jd-gui-2.png[width=500,height=200]
+
 
 . Open `/Applications/JD-GUI.app/Contents/MacOS/universalJavaApplicationStub.sh`.
 . Search `javacmd`.

@@ -14,14 +14,14 @@
 [source,zsh,indent=0,options=nowrap]
 ----
 # 查看当前使用语言
-lcale
+locale
 # 回车输入密码后显示语言列表，输入对应序号后回车即可设置
 sudo languagesetup
 ----
 +
 NOTE: mac分为本地域语言（主语言）和用户域语言（次语言），一般情况下你登录了账户，在偏好设置里面改的语言是"`次语言`"，不包括登录界面等系统级的显示语言，而使用以上终端修改的是整个系统的所有语言显示，最后，记得要重启。
 
-* [.line-through]#finder显示完整路径#
+* finder显示完整路径
 +
 [%collapsible]
 ====
@@ -75,6 +75,7 @@ image::init/brew-cask.png[]
 ** formula
 +
 image::init/brew-formula.png[]
+
 * zsh and https://github.com/ohmyzsh/ohmyzsh[on-my-zsh]
 +
 .View current installed shells
@@ -95,7 +96,18 @@ yum install zsh
 ----
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
 ----
+
 * Chrome
+** Install version `102.0.5005.61 (Official Build) (arm64)`
+*** xref:attachment$init/googlechrome 102.0.5005.61.dmg[Download]
 ** Chrome plugins use Google account sync.
 ** tampermonkey use Google Drive sync.
+*** xref:attachment$init/tampermonkey-backup-chrome-2023-08-16T06-43-33-909Z.zip[Download (2023-08-16)]
 
+* {empty}
++
+|===
+| HeaderCell1 | HeaderCell2
+|===
+
+== Setapp

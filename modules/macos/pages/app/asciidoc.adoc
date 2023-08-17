@@ -1,0 +1,38 @@
+= Customize App
+
+Use `Intellij IDEA` as an editor.
+But you need to do some operations to distinguish different `IntelliJ IDEA` instance.
+
+== Change ICON
+
+link:attachment$
+[source,shell,indent=0,options=nowrap]
+----
+cp ~/Icon/app/idea.icns /Applications/AsciiDoc.app/Contents/Resources/
+
+touch /Applications/AsciiDoc.app
+----
+
+== Change name in toolbar
+
+IMPORTANT: Cannot open application after restarting the system.
+Need to back up `Info.plist` files in advance.
+
+[source,shell,indent=0,options=nowrap]
+----
+cp /Applications/AsciiDoc.app/Contents/Info.plist /Applications/AsciiDoc.app/
+
+/usr/libexec/plistbuddy -c 'set CFBundleName AsciiDoc' /Applications/AsciiDoc.app/Contents/Info.plist
+
+/usr/libexec/plistbuddy -c 'set CFBundleIdentifier com.jetbrains.asciidoc' /Applications/AsciiDoc.app/Contents/Info.plist
+----
+
+== Update
+
+. {empty}
++
+[source,shell,indent=0,options=nowrap]
+----
+cp /Applications/AsciiDoc.app/Info.plist /Applications/AsciiDoc.app/Contents
+----
+. Run update

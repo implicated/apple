@@ -1,0 +1,21 @@
+= Licensed
+:!table-caption:
+
+|===
+| Software | Quantity | Price
+
+| Alfred 5 | 1 |
+| Surge iOS | 3  |
+| Surge Mac | 3  |
+| Keyboard Maestro | 5 |
+| JetBrains | ~ |
+| iMazing | 2 |
+|===
+
+.year
+|===
+| Software | Price
+
+| Nexitally | ¥1102.44
+| Setapp | $107.88
+|===

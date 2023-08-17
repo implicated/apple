@@ -1,0 +1,8 @@
+= system_profiler
+
+[source,bash,indent=0,options=nowrap]
+----
+system_profiler -listdatatypes
+system_profiler SPsoftwareDataType
+system_profiler -json SPApplicationsDataType > system.json
+----

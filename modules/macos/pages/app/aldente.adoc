@@ -1,4 +1,6 @@
-= https://apphousekitchen.com/[AlDente^]
+= AlDente
+
+https://apphousekitchen.com[official website^]
 
 控制电池电量保持在某个值
 

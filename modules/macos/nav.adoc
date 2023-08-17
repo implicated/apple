@@ -1,1 +1,51 @@
-* xref:index.adoc[]
+* xref:init/init.adoc[MacOS Init]
+
+* Setting Development Environment
+** xref:env/node.adoc[Node]
+** xref:env/go.adoc[Go]
+** xref:env/python.adoc[Python]
+** xref:env/sdkman.adoc[Java]
+** xref:env/nginx.adoc[Nginx]
+
+* Install App
+** xref:app/aldente.adoc[]
+** xref:app/alfred.adoc[]
+** xref:app/beyond-compare.adoc[]
+** xref:app/chrome.adoc[]
+** xref:app/core-shell.adoc[]
+** xref:app/hammerspoon.adoc[]
+** xref:app/idea-error.adoc[]
+** xref:app/idea.adoc[]
+** xref:app/imazing.adoc[]
+** xref:app/jd-gui.adoc[]
+** xref:app/karabiner-elements.adoc[]
+** xref:app/scriptdebugger.adoc[]
+** xref:app/surge-profile.adoc[]
+
+* Command Line Tool
+** xref:cli/gh.adoc[]
+** xref:cli/homebrew.adoc[]
+** xref:cli/jq.adoc[]
+** xref:cli/rename.adoc[]
+** xref:cli/zsh.adoc[]
+
+* MacOS Built-in
+** xref:core/applescript.adoc[]
+** xref:core/kernel.adoc[]
+** xref:core/option-symbol.adoc[]
+** xref:core/quicklook.adoc[]
+** xref:core/spotlight.adoc[]
+** xref:core/defaults.adoc[]
+** xref:core/plist.adoc[]
+
+* Keyboard Flow
+** xref:flow/hypeykey.adoc[]
+** xref:flow/keyboard-flow.adoc[]
+** xref:flow/keyboard-workflow.adoc[]
+** xref:flow/wubi.adoc[]
+
+* Misc
+** xref:extras/icalendar.adoc[]
+** xref:extras/privacy.adoc[]
+** xref:extras/terminal-proxy-switch-function.adoc[]
+** xref:extras/zsh-profile.adoc[]

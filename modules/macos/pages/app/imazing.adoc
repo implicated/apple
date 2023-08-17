@@ -1,25 +1,24 @@
-:date created: 2022-07-26 17:53
-:date updated: 2022-07-26 22:01
+= iMazing
 
-=== Set System Language
+== Set System Language
 
-[,zsh]
+[source,bash,indent=0,options=nowrap]
 ----
 1. base hardware
 ----
 
-=== Set Shuangpin Layout
+== Set Shuangpin Layout
 
-[,zsh]
+[source,bash,indent=0,options=nowrap]
 ----
 1. vim HomeDomain/Library/Preferences/com.apple.InputModePreferences.plist
 2. modify ShuangpinType = 5
 ----
 
-=== Set App Language
+== Set App Language
 
 . https://www.ietf.org/rfc/rfc4646.txt[Tags for Identifying Languages]
-
++
 ----
 1. zh-Hans 简体中文
 2. zh-Hant 繁体中文
@@ -27,18 +26,27 @@
 ----
 
 . Apple Map
-```zsh
++
+[source,bash,indent=0,options=nowrap]
+----
  .. vim AppDomain-com.apple.Maps/Library/Preferences/com.apple.Maps.plist.
  .. Add 'New Child' name is 'AppleLanguages' under 'Root', Modify 'Class' is 'Array'.
  .. Add 'New Child' under 'AppleLanguages'.
  .. Add item (Top takes precedence over bottom).
-```
-![[iMazing.png|1000x250]]
+----
++
+image::app/imazing.png[]
+
 . Apple Health
-```zsh
++
+[source,bash,indent=0,options=nowrap]
+----
  .. vim AppDomain-com.apple.Health/Library/Preferences/com.apple.Health.plist.
-```
+----
+
 . Apple Weather
-```zsh
++
+[source,bash,indent=0,options=nowrap]
+----
  .. vim AppDomain-com.apple.Health/Library/Preferences/com.apple.Health.plist.
-```
+----

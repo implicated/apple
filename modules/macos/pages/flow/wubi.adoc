@@ -1,6 +1,4 @@
 = Wu Bi
-:date created: 2022-06-13 00:24
-:date updated: 2022-06-21 01:26
 
 == 原则
 
