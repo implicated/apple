@@ -1,17 +1,38 @@
-include::vim.adoc[]
+= Vim
+:date created: 2022-06-27 14:19
 
-== Vim Reg
+IMPORTANT: Bram Moolenaar (1961 – 2023.08.03)
 
-[source,regexp]
+== Vim Future
+
+https://groups.google.com/g/vim_dev/c/dq9Wu5jqVTw[The future of the Vim project^]
+
+== Vim Tutor
+
+[source,bash]
 ----
-19,93s/\(\w\)\s\(\w\)/\1-\2/g
+# open Vim tutor
+vimtutor zh
 ----
 
-== Ref
+== Learn Vim
 
-* https://github.com/dengzhizhi/dotfiles/blob/master/.ideavimrc[dotfiles/.ideavimrc at master · dengzhizhi/dotfiles^]
+https://github.com/wsdjeg/Learn-Vim_zh_cn[Learn Vim]
 
-* https://github.com/sdaschner/dotfiles/blob/master/.vimrc[dotfiles/.vimrc at master · sdaschner/dotfiles · GitHub]
+== Vim Command
 
-[]
-* https://github.com/vim-scripts/applescript.vim[GitHub - vim-scripts/applescript.vim: Syntax highlighting for AppleScript]
+[source,bash]
+----
+# help
+:h <command>
+# config
+:version
+----
+
+== Vim Web
+
+* https://Vim-adventures.com[Vim Adventure]
+* https://Vimsnake.com/[Vim Snake]
+* https://www.outcoldman.com/cheatsheets/vim/[HotKey]
+* https://michael.peopleofhonoronly.com/vim/[HotKey-IMG]
+

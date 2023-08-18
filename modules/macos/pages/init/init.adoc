@@ -1,5 +1,6 @@
 = Init
 :toc:
+:!table-caption:
 
 == General
 
@@ -104,10 +105,51 @@ curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/instal
 ** tampermonkey use Google Drive sync.
 *** xref:attachment$init/tampermonkey-backup-chrome-2023-08-16T06-43-33-909Z.zip[Download (2023-08-16)]
 
-* {empty}
-+
+== Homebrew
+
+.Latest version
+[cols=',a']
 |===
-| HeaderCell1 | HeaderCell2
+| Name | Link
+
+| MacVim | `brew install macvim`
+| Bob | `brew install bob`
+| Karabiner-Elements | `brew install karabiner-elements`
+| Rectangle | `brew install rectangle`
+| Keyboard Maestro | `brew install keyboard-maestro`
+|===
+
+.Other
+|===
+| Name | Link
+| Homerow | `https://install.appcenter.ms/users/dexterleng/apps/homerow-redux/distribution_groups/production`
+| Homerow Scroller | `https://github.com/dexterleng/KeyboardScroller.docs/releases/tag/v1.0.2`
+|===
+
+.Specific version
+[cols=',,a']
+|===
+| Name | Version | Download
+| Input Source Pro | `2.1.15-beta`
+| xref:attachment$/init/input-source-pro-2.1.15-beta.dmg[Download]
+| Homerow | `0.17`
+| xref:attachment$/init/Homerow-0.17.zip[Download]
+| Keyboard-Scroller | `1.0.1`
+| xref:attachment$/init/keyboard-scroller-1.0.1.zip[Download]
+| QLMarkdown |
+| xref:attachment$/init/ql-markdown.zip[Download]
+| MacGPT |
+| xref:attachment$/init/mac-gpt.zip[Download]
 |===
 
 == Setapp
+
+|===
+| Name | Remark
+
+| HazeOver |
+| Mate Translate |
+| Paletro |
+| Paste |
+| CleanShot X |
+|===
