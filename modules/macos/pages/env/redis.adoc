@@ -1,0 +1,15 @@
+= Redis
+
+== Install
+
+.install
+[source,shell,indent=0,options=nowrap]
+----
+brew install redis
+----
+
+.start at login
+[source,shell,indent=0,options=nowrap]
+----
+brew services start redis
+----

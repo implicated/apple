@@ -33,6 +33,13 @@ brew outdated
 brew update
 ----
 
+=== Services
+
+[source,shell,indent=0,options=nowrap]
+----
+
+----
+
 === Help
 
 https://docs.brew.sh[Home]

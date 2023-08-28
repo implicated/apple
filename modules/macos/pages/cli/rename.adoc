@@ -9,9 +9,11 @@ brew install rename
 
 == Example
 
-[source,zsh]
+[source,shell,indent=0,options=nowrap]
 ----
-$ rename -nve 's/\s/-/g' *.adoc
-$ 'audio and video.adoc' would be renamed to 'audio-and-video.adoc'
+rename -nve 's/\s/-/g' *.adoc
+// 'audio and video.adoc' would be renamed to 'audio-and-video.adoc'
+
+rename -ve 's/\[瑞客论坛\]\[www.ruike1.com\]//' *.pdf
 ----
 

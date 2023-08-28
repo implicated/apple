@@ -32,6 +32,15 @@ image::app/idea-setting-metch.png[]
 cd /Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/conf/settings.xml
 ----
 
+==== Gradle
+
+.Locate
+[source,bash]
+----
+# maven
+cd /Applications/IntelliJ IDEA.app/Contents/plugins/maven/lib/maven3/conf/settings.xml
+----
+
 === External Install
 
 ==== AsciiDoc

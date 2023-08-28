@@ -1,0 +1,14 @@
+= Developer
+
+== Open Developer Mode
+
+menu:Settings[Privacy & Security > Developer Mode > Turn on]
+
+== Fix iPhone Developer Mode Not Showing Via Xcode
+
+. Download `Xcode`
+. Launch `Xcode` on your Mac.
+. Connect your iPhone to your Mac using a `USB` cable.
+. In `Xcode`, navigate to the `Window` menu and select `Devices and Simulators`.
+. Select your connected iPhone from the list.
+. On your iPhone, open menu:Settings[Privacy & Security > Developer Mode > Turn on].
